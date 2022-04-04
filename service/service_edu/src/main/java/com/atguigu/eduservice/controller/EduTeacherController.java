@@ -115,6 +115,7 @@ public class EduTeacherController {
     @PostMapping("updateTeacher")
     public R updateTeacher(@RequestBody EduTeacher eduTeacher){
         boolean b = eduTeacherService.updateById(eduTeacher);
+        
         if(b==true){
             return R.ok();
         }else{
